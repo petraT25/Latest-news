@@ -15,7 +15,7 @@ function NewsList() {
   return (
     <>
       {articles.map((article) => {
-        if (article.image_url !== null) {
+        if (article.urlToImage !== null) {
           return (
             <NewsCard
               title={article.title}
