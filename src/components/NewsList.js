@@ -6,23 +6,23 @@ function NewsList() {
 
   useEffect(() => {
     fetch(
-      "https://newsapi.org/v2/top-headlines?language=en&apiKey=543046149566408d9efad4dac3ee4532"
+      "https://newsdata.io/api/1/news?apikey=pub_7125a3c8172048dda302224785b83e77c1e4&category=environment,health,science,top&language=en"
     )
       .then((res) => res.json())
-      .then((data) => setArticles(data.articles));
+      .then((data) => setArticles(data.results));
   }, []);
 
   return (
     <>
       {articles.map((article) => {
-        if (article.urlToImage !== null) {
+        if (article.image_url !== null) {
           return (
             <NewsCard
               title={article.title}
               description={article.description}
-              url={article.url}
-              urlToImage={article.urlToImage}
-              publishedAt={article.publishedAt}
+              url={article.link}
+              image_url={article.image_url}
+              pubDate={article.pubDate}
             />
           );
         }
