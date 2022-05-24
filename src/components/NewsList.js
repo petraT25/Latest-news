@@ -6,10 +6,10 @@ function NewsList() {
 
   useEffect(() => {
     fetch(
-      "https://newsdata.io/api/1/news?apikey=pub_7125a3c8172048dda302224785b83e77c1e4&category=environment,health,science,top&language=en"
+      "https://api.thenewsapi.com/v1/news/top?api_token=xN9wPwTvtR7yDRT0ZxrDdzal7DZmxowgwduEQd6S&language=en&categories=general,science,health,tech,travel"
     )
       .then((res) => res.json())
-      .then((data) => setArticles(data.results));
+      .then((data) => setArticles(data.data));
   }, []);
 
   return (
@@ -20,9 +20,9 @@ function NewsList() {
             <NewsCard
               title={article.title}
               description={article.description}
-              url={article.link}
+              url={article.url}
               image_url={article.image_url}
-              pubDate={article.pubDate}
+              publishedAt={article.published_at}
             />
           );
         }

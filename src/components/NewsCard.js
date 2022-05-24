@@ -7,7 +7,7 @@ function NewsCard(props) {
           <h3 className="newsCard__title">{props.title}</h3>
         </a>
         <p className="newsCard__description">{props.description}</p>
-        <p className="newsCard__published">{props.pubDate}</p>
+        <p className="newsCard__published">{props.publishedAt}</p>
       </div>
     </div>
   );
