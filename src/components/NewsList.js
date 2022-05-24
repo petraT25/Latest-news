@@ -6,23 +6,23 @@ function NewsList() {
 
   useEffect(() => {
     fetch(
-      "https://api.thenewsapi.com/v1/news/top?api_token=xN9wPwTvtR7yDRT0ZxrDdzal7DZmxowgwduEQd6S&language=en&categories=general,science,health,tech,travel"
+      "https://api.nytimes.com/svc/topstories/v2/home.json?api-key=EHPaMLVphOKYad2uPMNCMEnriuNgRRhA"
     )
       .then((res) => res.json())
-      .then((data) => setArticles(data.data));
+      .then((data) => setArticles(data.results));
   }, []);
 
   return (
     <>
       {articles.map((article) => {
-        if (article.image_url !== null) {
+        if (article.multimedia[1].url !== null) {
           return (
             <NewsCard
               title={article.title}
-              description={article.description}
+              description={article.abstract}
               url={article.url}
-              image_url={article.image_url}
-              publishedAt={article.published_at}
+              image_url={article.multimedia[1].url}
+              publishedAt={article.published_date}
             />
           );
         }
