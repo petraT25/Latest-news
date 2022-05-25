@@ -1,4 +1,4 @@
-function NewsCard(props) {
+export default function NewsCard(props) {
   return (
     <div className="newsCard">
       <img className="newsCard__image" src={props.image_url} alt="" />
@@ -13,4 +13,3 @@ function NewsCard(props) {
   );
 }
 
-export default NewsCard;

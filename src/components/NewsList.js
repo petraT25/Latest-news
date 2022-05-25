@@ -1,7 +1,7 @@
 import NewsCard from "./NewsCard";
 import { useEffect, useState } from "react";
 
-function NewsList() {
+export default function NewsList() {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
@@ -31,4 +31,4 @@ function NewsList() {
   );
 }
 
-export default NewsList;
+

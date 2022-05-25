@@ -1,14 +1,14 @@
 import "./App.css";
 import NewsList from "./components/NewsList";
 import Navbar from "./components/Navbar";
+import Brand from "./components/Brand";
 
-function App() {
+export default function App() {
   return (
     <>
       <Navbar />
       <NewsList />
+      <Brand />
     </>
   );
 }
-
-export default App;
