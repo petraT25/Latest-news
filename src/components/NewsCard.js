@@ -1,5 +1,5 @@
 export default function NewsCard(props) {
-  const published = `${props.publishedAt.slice(8,10)}-${props.publishedAt.slice(5,7)}-${props.publishedAt.slice(0,4)} ${props.publishedAt.slice(14,19)}`
+  const published = `${props.publishedAt.slice(8,10)}-${props.publishedAt.slice(5,7)}-${props.publishedAt.slice(0,4)} ${props.publishedAt.slice(11,16)}`
 
   return (
     <div className="newsCard">
