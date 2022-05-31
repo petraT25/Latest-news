@@ -15,7 +15,7 @@ export default function NewsList() {
   return (
     <>
       {articles.map((article) => {
-        if (article.multimedia[1].url !== null) {
+        
           return (
             <NewsCard
               title={article.title}
@@ -26,7 +26,7 @@ export default function NewsList() {
             />
           );
         }
-      })}
+      )}
     </>
   );
 }
