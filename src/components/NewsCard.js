@@ -13,7 +13,7 @@ export default function NewsCard(props) {
         <p className="newsCard__published">{published}</p>
       </div>
     </div>
-    <hr></hr>
+   
     </>
   );
 }

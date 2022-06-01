@@ -7,7 +7,7 @@ import Brand from "./components/Brand";
 
 export default function App() {
 
-  const [darkMode, setDarkMode] = React.useState(true)
+  const [darkMode, setDarkMode] = React.useState(false)
   function toggleDarkMode() {
     setDarkMode(prevMode => !prevMode)
   }
