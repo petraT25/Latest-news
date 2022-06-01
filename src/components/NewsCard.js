@@ -2,6 +2,7 @@ export default function NewsCard(props) {
   const published = `${props.publishedAt.slice(8,10)}-${props.publishedAt.slice(5,7)}-${props.publishedAt.slice(0,4)} ${props.publishedAt.slice(11,16)}`
 
   return (
+    <>
     <div className="newsCard">
       <img className="newsCard__image" src={props.image_url} alt="" />
       <div className="newsCard__container">
@@ -12,6 +13,8 @@ export default function NewsCard(props) {
         <p className="newsCard__published">{published}</p>
       </div>
     </div>
+    <hr></hr>
+    </>
   );
 }
 

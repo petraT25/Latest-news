@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 export default function NewsList() {
   const [articles, setArticles] = useState([]);
+  const [numOfArticles, setNumOfArticles] = useState(6);
 
   useEffect(() => {
     fetch(
@@ -12,23 +13,36 @@ export default function NewsList() {
       .then((data) => setArticles(data.results));
   }, []);
 
+  function loadMore() {
+    console.log(numOfArticles, articles.length);
+    setNumOfArticles((prevValue) => prevValue + 4);
+  }
+
+  const styles = {
+    display: numOfArticles > articles.length ? "none" : "block"
+  }
+  
+
   return (
     <>
-      {articles.map((article) => {
-        if (article.multimedia[1].url !== null) {
-          return (
-            <NewsCard
-              title={article.title}
-              description={article.abstract}
-              url={article.url}
-              image_url={article.multimedia[1].url}
-              publishedAt={article.published_date}
-            />
-          );
-        }
+      {articles.slice(0, numOfArticles).map((article) => {
+        return (
+          <NewsCard
+            title={article.title}
+            description={article.abstract}
+            url={article.url}
+            image_url={article.multimedia[1].url}
+            publishedAt={article.published_date}
+          />
+        );
       })}
+      <div className="load-more">
+        <button className="load-more__button" 
+                onClick={loadMore}
+                style={styles}>
+          Load More
+        </button>
+      </div>
     </>
   );
 }
-
-

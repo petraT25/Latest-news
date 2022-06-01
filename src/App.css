@@ -10,10 +10,31 @@ body {
   background-color: rgba(88, 88, 93, 0.15);
 }
 
+hr {
+  width: 90vw;
+  margin: auto;
+}
+
 .navbar {
   text-align: center;
   font-family: "Charm", cursive;
   font-size: 1.2rem;
+}
+
+.navbar__list {
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.navbar__list li {
+  margin: 0.2rem;
+  border: 0.5px solid rgba(0, 0, 0, 0.216);
+  padding: 0.2rem 0.4rem;
+  border-radius: 1rem;
 }
 
 .navbar__title {
@@ -25,18 +46,17 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 255, 0.1);
-  border: 1px solid white;
+  background-color: rgba(81, 81, 84, 0);
+/*  border-bottom: 2px solid rgba(70, 69, 69, 0.491);*/
   width: 95vw;
-  margin: 0.5rem auto;
-  border-radius: 5px;
+  margin: 1rem auto 0.5rem auto;
 }
 
 .newsCard__image {
   width: 80%;
   height: auto;
   max-width: 800px;
-  border-radius: 5px;
+  border-radius: 1rem;
   margin-top: 0.5rem;
 }
 
@@ -93,6 +113,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1.3fr;
     grid-gap: 5px;
+    margin: 1.5rem auto 0.5rem auto;
   }
 
   .newsCard__container {
@@ -132,6 +153,10 @@ body {
     font-size: 1.6rem;
   }
 
+  hr {
+    width: 80vw;
+  }
+
   .newsCard {
     width: 80vw;
   }
@@ -139,11 +164,26 @@ body {
   .newsCard__title {
     font-size: 1.1rem;
   }
+
+  .load-more {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .load-more__button {
+    width: 80vw;
+    margin: auto;
+    height: 2.5rem;
+  }
 }
 
 @media only screen and (min-width: 920px) {
   .navbar {
     font-size: 2rem;
+  }
+
+  .newsCard {
+    margin: 2rem auto 0.8rem auto;
   }
 
 
@@ -170,6 +210,10 @@ body {
     width: 60vw;
   }
 
+  hr {
+    width: 60vw;
+  }
+
   .newsCard__title {
     font-size: 1.5rem;
   }
@@ -182,10 +226,19 @@ body {
   .newsCard__published {
     font-size: 1rem;
   }
+
+  .load-more__button {
+    width: 60vw;
+    height: 3rem;
+  }
 }
 
 @media only screen and (min-width: 1600px) {
   .newsCard {
+    max-width: 1500px;
+  }
+
+  hr {
     max-width: 1500px;
   }
 
