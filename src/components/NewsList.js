@@ -1,7 +1,7 @@
 import NewsCard from "./NewsCard";
 import { useEffect, useState } from "react";
 
-export default function NewsList() {
+export default function NewsList(props) {
   const [articles, setArticles] = useState([]);
   const [numOfArticles, setNumOfArticles] = useState(6);
 
@@ -15,16 +15,11 @@ export default function NewsList() {
 
   function loadMore() {
     console.log(numOfArticles, articles.length);
-    setNumOfArticles((prevValue) => prevValue + 4);
+    setNumOfArticles((prevValue) => prevValue + 6);
   }
-
-  const styles = {
-    display: numOfArticles > articles.length ? "none" : "block"
-  }
-  
 
   return (
-    <>
+    <div className={props.darkMode ? "dark" : ""}>
       {articles.slice(0, numOfArticles).map((article) => {
         return (
           <NewsCard
@@ -37,12 +32,16 @@ export default function NewsList() {
         );
       })}
       <div className="load-more">
-        <button className="load-more__button" 
-                onClick={loadMore}
-                style={styles}>
+        <button
+          className="load-more__button"
+          onClick={loadMore}
+          style={{
+            display: numOfArticles >= articles.length ? "none" : "block",
+          }}
+        >
           Load More
         </button>
       </div>
-    </>
+    </div>
   );
 }

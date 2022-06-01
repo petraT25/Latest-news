@@ -10,12 +10,86 @@ body {
   background-color: rgba(88, 88, 93, 0.15);
 }
 
+ul {
+  width: 100vw;
+}
+
+.toggler {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 3%;
+  right: 1%;
+}
+
+.toggler p {
+  font-size: 0.625rem;
+  font-weight: 600;
+}
+
+.toggler__slider {
+  width: 40px;
+  height: 20px;
+  background-color: #2B283A;
+  border-radius: 2rem;
+  margin-inline: 7px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid black;
+  box-sizing: content-box;
+}
+
+.dark .toggler__slider {
+  border-color: white;
+  background-color: #F5F5F5;
+}
+
+.slider__circle {
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border-radius: 50%;
+  border: 0.5px solid rgb(132, 130, 130);
+}
+
+.dark .slider__circle {
+  background-color: black;
+}
+
+.toggler__light {
+  color: #2B283A;
+}
+
+.dark .toggler__light {
+  color: #918E9B;
+}
+
+.toggler__dark {
+  color: #D5D4D8;
+}
+
+.dark .toggler__dark {
+  color: #FFFFFF;
+}
+
+.dark .toggler__slider {
+  justify-content: flex-end;
+}
+
+
+.dark {
+  background-color: rgba(0, 0, 0, 0.489);
+}
+
 hr {
   width: 90vw;
   margin: auto;
 }
 
 .navbar {
+  position: relative;
   text-align: center;
   font-family: "Charm", cursive;
   font-size: 1.2rem;
@@ -28,6 +102,7 @@ hr {
   align-items: center;
   justify-content: center;
   list-style-type: none;
+  height: 50px;
 }
 
 .navbar__list li {
