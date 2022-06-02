@@ -39,7 +39,7 @@ export default function NewsList(props) {
             display: numOfArticles >= articles.length ? "none" : "block",
           }}
         >
-          Load More
+          LOAD MORE
         </button>
       </div>
     </div>
