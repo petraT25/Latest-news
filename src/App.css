@@ -2,13 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap");
 
 :root {
-  --main-light-color: rgba(69,69,90,0.15);
-  --main-dark-color: rgba(9,9,9,0.9);
+  --main-light-color: rgba(69, 69, 90, 0.15);
+  --main-dark-color: rgba(9, 9, 9, 0.9);
   --bg-toggler-light: rgb(255, 255, 255);
   --font-family-title: "Charm", cursive;
   --font-family-content: "Slabo 27px", serif;
-  --regular-black: rgb(0,0,0);
-  --regular-white:rgb(255,255,255);
+  --regular-black: rgb(0, 0, 0);
+  --regular-white: rgb(255, 255, 255);
 }
 
 * {
@@ -23,6 +23,10 @@ body {
 
 .dark {
   background-color: var(--main-dark-color);
+}
+
+.newsList {
+  padding-bottom: 3rem;
 }
 
 .toggler {
@@ -211,13 +215,14 @@ body {
   margin-top: 1rem;
   font-family: var(--font-family-content);
   cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
 
 .load-more__button:hover {
   transform: scale(1.02);
-  transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.2s;
   background-color: var(--regular-white);
-  color:rgba(0, 0, 0, 0.8)
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .dark .load-more__button {
@@ -297,7 +302,6 @@ body {
 }
 
 @media only screen and (min-width: 700px) {
-  
   .navbar__list {
     font-size: 0.9rem;
   }
@@ -339,43 +343,90 @@ body {
 }
 
 @media only screen and (min-width: 920px) {
-  .navbar {
-    font-size: 2rem;
+  .toggler__slider {
+    width: 48px;
+    height: 20px;
   }
 
-  .newsCard {
-    margin: 2rem auto 0.8rem auto;
+  .slider__circle {
+    height: 28px;
+    width: 28px;
   }
 
-  .newsCard__title {
-    font-size: 1.3rem;
-  }
-
-  .newsCard__description {
+  .navbar__list {
     font-size: 1rem;
-    line-height: 1.1rem;
   }
 
-  .brand {
-    margin-top: 4rem;
+  .navbar__list li {
+    margin: 2rem 1rem 0 1rem;
   }
-}
 
-@media only screen and (min-width: 1200px) {
-  .navbar {
-    margin: 3% auto;
+  .navbar__title {
+    font-size: 2.5rem;
   }
 
   .newsCard {
-    width: 60vw;
-  }
-
-  hr {
-    width: 60vw;
+    margin: 0 auto 1.5rem auto;
   }
 
   .newsCard__title {
     font-size: 1.5rem;
+  }
+
+  .newsCard__description {
+    font-size: 1.1rem;
+    line-height: 1.1rem;
+  }
+
+  .newsCard__published {
+    font-size: 0.9rem;
+  }
+
+  .load-more__button {
+    font-weight: 700;
+  }
+
+  .brand {
+    padding-top: 4rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .toggler {
+    margin-top: 2rem;
+    margin-right: 2rem;
+  }
+
+  .toggler__slider {
+    width: 55px;
+    height: 25px;
+  }
+
+  .slider__circle {
+    height: 32px;
+    width: 32px;
+  }
+
+  .navbar__list {
+    font-size: 1.3rem;
+  }
+
+  .navbar__list li {
+    border-radius: 50vw;
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar__title {
+    font-size: 3rem;
+    margin-top: 3rem;
+  }
+  .newsCard {
+    width: 60vw;
+    max-width: 1500px;
+  }
+
+  .newsCard__title {
+    font-size: 1.6rem;
   }
 
   .newsCard__description {
@@ -384,27 +435,23 @@ body {
   }
 
   .newsCard__published {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .load-more__button {
     width: 60vw;
+    max-width: 1500px;
     height: 3rem;
   }
 }
 
 @media only screen and (min-width: 1600px) {
-  .newsCard {
-    max-width: 1500px;
+  .navbar__list {
+    font-size: 1.5rem;
   }
 
-  hr {
-    max-width: 1500px;
-  }
-
-  .navbar {
-    font-size: 2.5rem;
-    margin: 3% auto;
+  .navbar__title {
+    font-size: 3.5rem;
   }
 
   .newsCard__title {

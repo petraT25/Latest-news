@@ -19,7 +19,7 @@ export default function NewsList(props) {
   }
 
   return (
-    <div className={props.darkMode ? "dark" : ""}>
+    <div className={props.darkMode ? "newsList dark" : "newsList"}>
       {articles.slice(0, numOfArticles).map((article) => {
         return (
           <NewsCard
