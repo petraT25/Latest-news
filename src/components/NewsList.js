@@ -14,13 +14,14 @@ export default function NewsList(props) {
   }, []);
 
   function loadMore() {
-    console.log(numOfArticles, articles.length);
-    setNumOfArticles((prevValue) => prevValue + 6);
+    setNumOfArticles((prevValue) => prevValue + 5);
   }
 
   return (
+    
     <div className={props.darkMode ? "newsList dark" : "newsList"}>
       {articles.slice(0, numOfArticles).map((article) => {
+        if(article.multimedia !== null) {
         return (
           <NewsCard
             title={article.title}
@@ -30,7 +31,9 @@ export default function NewsList(props) {
             publishedAt={article.published_date}
           />
         );
-      })}
+      } else {
+        return null
+      }})}
       <div className="load-more">
         <button
           className="load-more__button"
