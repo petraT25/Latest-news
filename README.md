@@ -1,3 +1,18 @@
+--> simple app that shows top articles from around the world
+
+--> made with React.js
+
+--> local state managed using useState hook, data fetched with the help of useEffect hook.
+
+--> data fetched from "The NYTimes API"
+
+--> app can be toggled between light and dark mode
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
