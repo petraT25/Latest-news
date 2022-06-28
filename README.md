@@ -1,12 +1,12 @@
---> simple app that shows top articles from around the world
+Simple app that shows top articles from around the world
 
---> made with React.js
+Made with React.js
 
---> local state managed using useState hook, data fetched with the help of useEffect hook.
+Local state managed using useState hook, data fetched with the help of useEffect hook.
 
---> data fetched from "The NYTimes API"
+Data fetched from "The NYTimes API"
 
---> app can be toggled between light and dark mode
+App can be toggled between light and dark mode
 
 
 
